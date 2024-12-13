@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #062e3f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+#datetime {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#task-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #062e3f;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #062e3f;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #045a72;
+}
+
+#task-section {
+    width: 100%;
+    max-width: 600px;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.task-item {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    background-color: #d3ffd3;
+}
+
+footer {
+    background-color: #062e3f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 390px) {
+    #input-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
